@@ -88,46 +88,48 @@ export default function Page() {
           />
         </div>
        <div className="absolute gap-2 flex top-2 left-2 items-center overflow-visible">
-  <Image
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmBmBzZ-QJuhAmeZPW6DHwD7zpDvY1EpH4w&s"
-    alt="Logo"
-    width={60}
-    height={60}
-    className="object-contain transition-transform duration-700 rounded-full"
-  />
-  <div className="text-left leading-tight">
-  {/* "VIGNAN" in red */}
-  <h1 className="text-2xl font-extrabold text-[#E0262A]">
-    VIGNAN
-  </h1>
-  {/* "Institute of Technology & Science" in black */}
-  <h2 className="text-lg font-semibold  -mt-1">
-    Institute of Technology & Science
-  </h2>
-  
-  {/* Horizontal rule (optional) */}
-  <hr className="my-1 border-gray-400 w-2/3" />
-  
-  {/* "AN AUTONOMOUS INSTITUTE" in blue */}
-  <h3 className="text-sm font-bold text-[#0072BC] uppercase tracking-wide">
-    AN AUTONOMOUS INSTITUTE
-  </h3>
-  
-  {/* Address in smaller black text */}
-  {/* <p className="text-sm  mt-1">
-    Vignan Hills Near Ramoji Film City, Deshmukhi
-  </p> */}
-  <p className="text-sm ">
-    Pochampally, Hyderabad, T.G.
-  </p>
-</div>
-
-</div>
+          <Image
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmBmBzZ-QJuhAmeZPW6DHwD7zpDvY1EpH4w&s"
+            alt="Logo"
+            width={60}
+            height={60}
+            className="object-contain transition-transform duration-700 rounded-full"
+          />
+          <div className="text-left leading-tight">
+            {/* "VIGNAN" in red */}
+            <h1 className="text-2xl font-extrabold text-[#E0262A]">
+              VIGNAN
+            </h1>
+            {/* "Institute of Technology & Science" in black */}
+            <h2 className="md:text-lg text-xs font-semibold  -mt-1">
+              Institute of Technology & Science
+            </h2>
+            
+            {/* Horizontal rule (optional) */}
+            <hr className="my-1 border-gray-400 w-2/3" />
+            
+            {/* "AN AUTONOMOUS INSTITUTE" in blue */}
+            <h3 className="text-xs sm:text-sm font-bold text-[#0072BC] uppercase tracking-wide">
+              AN AUTONOMOUS INSTITUTE
+            </h3>
+            
+            {/* Address in smaller black text */}
+            {/* <p className="text-sm  mt-1">
+              Vignan Hills Near Ramoji Film City, Deshmukhi
+            </p> */}
+            <p className="text-sm hidden sm:block ">
+              Pochampally, Hyderabad, T.G.
+            </p>
+          </div>
+        </div>
 
         <motion.div style={{ y }} className="container relative z-10 px-4 mx-auto text-center">
         
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <AnimatedLogo />
+           
+            <div className=" mr-10 md:mr-24">
+              <AnimatedLogo />
+            </div>
 
             <motion.h1
               className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400 drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]"
@@ -135,19 +137,15 @@ export default function Page() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1 }}>
+              <motion.span className="text-2xl sm:text-4xl md:text-6xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1 }}>
                 Silver Jubilee Celebration
               </motion.span>
             </motion.h1>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Calendar className="h-5 w-5 text-violet-400" />
-                <span className="text-lg">March 20th & 21st, 2025</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <MapPin className="h-5 w-5 text-violet-400" />
-                <span className="text-lg">Vignan Institute of Technology & Science</span>
+              <div className="flex items-center gap-1 p-1 sm:gap-2 bg-white/10 backdrop-blur-sm sm:px-4 sm:py-2 rounded-full">
+                <Calendar className="sm:h-5 h-3.5 w-3.5 sm:w-5 text-violet-400" />
+                <span className="text-xs sm:text-lg">March 20th & 21st, 2025.</span>
               </div>
             </div>
           </motion.div>
@@ -245,48 +243,46 @@ export default function Page() {
 
       {/* Competitions & Activities Section */}   
       <section className="relative py-20">
-  <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
-  <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-violet-600/10" />
-  <div className="container px-4 mx-auto relative">
-    <motion.h2
-      className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      Competitions & Activities
-    </motion.h2>
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-violet-600/10" />
+        <div className="container px-4 mx-auto relative">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Competitions & Activities
+          </motion.h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-      {events.map((event, index) => (
-        <motion.div
-          key={event.title}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <Card className="p-4 group transition-all duration-300 bg-white/10 backdrop-blur-lg border border-white/20 hover:shadow-2xl hover:border-white/40">
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
-              <Image
-                src={eventImages[index]}
-                alt={event.title}
-                fill
-                className="object-cover"
-              />
-              {/* Optional overlay for enhanced effect */}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <h3 className="text-lg font-semibold mb-1 text-white">{event.title}</h3>
-            <p className="text-gray-300 text-sm">{event.description}</p>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+            {events.map((event, index) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="p-4 group transition-all duration-300 bg-white/10 backdrop-blur-lg border border-white/20 hover:shadow-2xl hover:border-white/40">
+                  <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={eventImages[index]}
+                      alt={event.title}
+                      fill
+                      className="object-cover"
+                    />
+                    {/* Optional overlay for enhanced effect */}
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1 text-white">{event.title}</h3>
+                  <p className="text-gray-300 text-sm">{event.description}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-
-      
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-cyan-500/20" />
@@ -298,15 +294,28 @@ export default function Page() {
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400">
+            <h2 className="sm:text-3xl text-2xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-cyan-400">
               Join Us in the Celebration!
             </h2>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="sm:text-xl  mb-8 text-white/90">
               Be part of Vignan&apos;s biggest cultural extravaganza as we celebrate our Silver Jubilee
             </p>
           </motion.div>
         </div>
       </section>
+
+      {/* Designed by K. Pavan */}
+      <footer className="text-center py-4 text-sm text-white">
+        Designed by{" "}
+        <a
+          href="https://www.linkedin.com/in/kavali-pavan-598515274/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          K. Pavan
+        </a>
+      </footer>
     </div>
   )
 }
