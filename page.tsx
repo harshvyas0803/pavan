@@ -87,23 +87,24 @@ export default function Page() {
             priority
           />
         </div>
-        <div className="absolute gap-2 flex top-2 left-2">
-        <Image
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmBmBzZ-QJuhAmeZPW6DHwD7zpDvY1EpH4w&s"
-                  alt="Live Concert"
-                width={60} height={60}
-                  className="object-cover transition-transform duration-700   bg-transparent"
-                />
-                <div>
-                <h1>VIGNAN</h1>
-                <h3>Institue of Technology &Science</h3>
-                <hr />
-                <h4>AN AUTONOMOUS INSTITUTE</h4>
-                <p>Vignan Hills Near Ramoji Film City,Deshmukhi</p>
-                <p>Pochampally ,Hyderabad,T.G.</p>
-                </div>
-               
-        </div>
+       <div className="absolute gap-2 flex top-2 left-2 items-center overflow-visible">
+  <Image
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmBmBzZ-QJuhAmeZPW6DHwD7zpDvY1EpH4w&s"
+    alt="Logo"
+    width={60}
+    height={60}
+    className="object-contain transition-transform duration-700 bg-transparent"
+  />
+  <div className="text-white">
+    <h1 className="text-lg font-bold">VIGNAN</h1>
+    <h3 className="text-sm">Institute of Technology & Science</h3>
+    <hr className="my-1 border-white" />
+    <h4 className="text-sm">AN AUTONOMOUS INSTITUTE</h4>
+    <p className="text-xs">Vignan Hills Near Ramoji Film City, Deshmukhi</p>
+    <p className="text-xs">Pochampally, Hyderabad, T.G.</p>
+  </div>
+</div>
+
         <motion.div style={{ y }} className="container relative z-10 px-4 mx-auto text-center">
         
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -223,46 +224,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Competitions & Activities Section */}
-      {/* <section className="relative py-20">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
-        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-violet-600/10" />
-        <div className="container px-4 mx-auto relative">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-400"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Competitions & Activities
-          </motion.h2>
-
-          <div className="relative">
-            <EventPath />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
-              {events.map((event, index) => (
-                <motion.div
-                  key={event.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="p-6 group hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-xl border-gray-700 hover:border-gray-600">
-                    <div
-                      className={`mb-4 p-3 rounded-lg bg-gradient-to-br ${event.gradient} group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      {event.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-violet-200">{event.title}</h3>
-                    <p className="text-gray-300">{event.description}</p>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-    <section className="relative py-20">
+      {/* Competitions & Activities Section */}   
+      <section className="relative py-20">
   <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
   <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-violet-600/10" />
   <div className="container px-4 mx-auto relative">
@@ -283,11 +246,18 @@ export default function Page() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <Card className="p-4 group hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-xl border-gray-700 hover:border-gray-600">
+          <Card className="p-4 group transition-all duration-300 bg-white/10 backdrop-blur-lg border border-white/20 hover:shadow-2xl hover:border-white/40">
             <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
-            <Image src={eventImages[index]} alt={event.title} fill className="object-cover" />
+              <Image
+                src={eventImages[index]}
+                alt={event.title}
+                fill
+                className="object-cover"
+              />
+              {/* Optional overlay for enhanced effect */}
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
             </div>
-            <h3 className="text-lg font-semibold mb-1 text-violet-200">{event.title}</h3>
+            <h3 className="text-lg font-semibold mb-1 text-white">{event.title}</h3>
             <p className="text-gray-300 text-sm">{event.description}</p>
           </Card>
         </motion.div>
