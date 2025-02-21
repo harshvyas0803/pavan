@@ -93,16 +93,35 @@ export default function Page() {
     alt="Logo"
     width={60}
     height={60}
-    className="object-contain transition-transform duration-700 bg-transparent"
+    className="object-contain transition-transform duration-700 rounded-full"
   />
-  <div className="text-white">
-    <h1 className="text-lg font-bold">VIGNAN</h1>
-    <h3 className="text-sm">Institute of Technology & Science</h3>
-    <hr className="my-1 border-white" />
-    <h4 className="text-sm">AN AUTONOMOUS INSTITUTE</h4>
-    <p className="text-xs">Vignan Hills Near Ramoji Film City, Deshmukhi</p>
-    <p className="text-xs">Pochampally, Hyderabad, T.G.</p>
-  </div>
+  <div className="text-left leading-tight">
+  {/* "VIGNAN" in red */}
+  <h1 className="text-2xl font-extrabold text-[#E0262A]">
+    VIGNAN
+  </h1>
+  {/* "Institute of Technology & Science" in black */}
+  <h2 className="text-lg font-semibold  -mt-1">
+    Institute of Technology & Science
+  </h2>
+  
+  {/* Horizontal rule (optional) */}
+  <hr className="my-1 border-gray-400 w-2/3" />
+  
+  {/* "AN AUTONOMOUS INSTITUTE" in blue */}
+  <h3 className="text-sm font-bold text-[#0072BC] uppercase tracking-wide">
+    AN AUTONOMOUS INSTITUTE
+  </h3>
+  
+  {/* Address in smaller black text */}
+  {/* <p className="text-sm  mt-1">
+    Vignan Hills Near Ramoji Film City, Deshmukhi
+  </p> */}
+  <p className="text-sm ">
+    Pochampally, Hyderabad, T.G.
+  </p>
+</div>
+
 </div>
 
         <motion.div style={{ y }} className="container relative z-10 px-4 mx-auto text-center">
